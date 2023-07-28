@@ -30,7 +30,7 @@ app.use("/",router)
 
 
 // Start the server
-const PORT:Number = Number(process.env.PORT) || 6010
+const PORT:Number = Number(process.env.PORT) || 3000
 const server: Server = app.listen(PORT,()=> console.log(`runig on port  ${PORT}`))
 
 
