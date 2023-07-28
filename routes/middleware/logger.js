@@ -1,9 +1,8 @@
-const winston = require("winston")
-const expressWinston = require("express-winston")
-require('winston-mongodb')
-require("dotenv").config()
-
-
+"use strict";
+const winston = require("winston");
+const expressWinston = require("express-winston");
+require('winston-mongodb');
+require("dotenv").config();
 const logger = expressWinston.logger({
     transports: [
         // new winston.transports.Console({
@@ -16,17 +15,12 @@ const logger = expressWinston.logger({
                 useUnifiedTopology: true
             },
             collection: 'server_logs',
-            format: winston.format.combine(
-                winston.format.timestamp(),
-                winston.format.json()
-            ),
-            metaKey:"meta"
+            format: winston.format.combine(winston.format.timestamp(), winston.format.json()),
+            metaKey: "meta"
         })
     ],
-    meta:true
-})
-
-
-module.exports={
+    meta: true
+});
+module.exports = {
     logger
-}
+};

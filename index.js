@@ -22,5 +22,5 @@ app.get("/", (req, res) => {
 // Add the routes
 app.use("/", route_1.router);
 // Start the server
-const PORT = Number(process.env.PORT) || 3000;
+const PORT = Number(process.env.PORT) || 6010;
 const server = app.listen(PORT, () => console.log(`runig on port  ${PORT}`));
